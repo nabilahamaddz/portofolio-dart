@@ -1,0 +1,243 @@
+<div>
+    <div class="relative min-h-[380px] overflow-hidden border-b border-outline">
+        <img 
+            src="/assets/Hilldan W.jpeg" 
+            alt="Hilldan Wilyarosa" 
+            class="absolute inset-0 h-full w-full object-cover object-[center_40%] opacity-30"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-t from-base via-base/90 to-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/10"></div>
+
+        <button
+            type="button"
+            @click="closeMember(); activeMember = null; selectedMember = null"
+            class="absolute right-5 top-5 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-white hover:text-base"
+            aria-label="Tutup profil">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="relative z-20 flex min-h-[380px] items-end p-7 md:p-10">
+            <div class="max-w-3xl">
+                <span class="mb-4 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+                    Profil Anggota 04
+                </span>
+
+                <h2 class="text-4xl font-black tracking-tight text-white md:text-6xl">
+                    Hilldan Wilyarosa
+                </h2>
+
+                <p class="mt-3 text-lg font-medium text-zinc-300">
+                    D3 Teknologi Informasi
+                </p>
+
+                <p class="mt-4 max-w-2xl leading-relaxed text-zinc-400">
+                    Ketertarikan di bidang videografi, editing video dan pengembangan keahlian teknologi digital
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="https://github.com/HilldanWilyarosa" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 hover:text-white hover:border-primary transition">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/hilldan-wilyarosa-53742842b" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 hover:text-white hover:border-cyan-300 transition">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://www.instagram.com/hill__and/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 hover:text-white hover:border-pink-400 transition">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-7 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="space-y-8">
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-secondary">
+                        Tentang
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Profil Singkat
+                    </h3>
+
+                    <div class="mt-5 rounded-3xl border border-outline bg-surface p-6">
+                        <p class="leading-relaxed text-zinc-400">
+                            Saya mahasiswa D3 Teknologi Informasi yang memiliki ketertarikan pada dunia multimedia, khususnya videografi dan editing video. Saat ini saya aktif mengasah keterampilan serta terus memperluas eksplorasi pemahaman di bidang IT.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Keahlian
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Keahlian & Minat
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="cursor-pointer rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-200 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105">
+                            Videography
+                        </span>
+                        <span class="cursor-pointer rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-200 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105">
+                            Adobe Premiere Pro
+                        </span>
+                        <span class="cursor-pointer rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300 transition-all duration-300 hover:border-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-200 hover:shadow-lg hover:shadow-cyan-400/30 hover:scale-105">
+                            Photography
+                        </span>
+                        <span class="cursor-pointer rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300 transition-all duration-300 hover:border-purple-300 hover:bg-purple-500/20 hover:text-purple-200 hover:shadow-lg hover:shadow-purple-400/30 hover:scale-105">
+                            Programming
+                        </span>
+                        <span class="cursor-pointer rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300 transition-all duration-300 hover:border-purple-300 hover:bg-purple-500/20 hover:text-purple-200 hover:shadow-lg hover:shadow-purple-400/30 hover:scale-105">
+                            Web Development
+                        </span>
+                    </div>
+                </section>
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Piagam Penghargaan
+                    </p>
+                    
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Sertifikat Penghargaan
+                    </h3>
+
+                    <div class="mt-5">
+                        <a href="https://drive.google.com/file/d/1DBsPZmauok8AlvDaX1g5ZKBO529ISqBj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=1DBsPZmauok8AlvDaX1g5ZKBO529ISqBj&sz=w1000" alt="Sertifikat FLS2N Bidang Film Pendek" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-4 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-base font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">FLS2N Bidang Film Pendek</h4>
+                                    <p class="text-xs text-zinc-400 mt-0.5 line-clamp-1">Apresiasi kompetisi FLS2N tingkat SMA</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-3.5 py-1 text-[11px] font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    KEMENDIKBUD
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-10">
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Pencapaian
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Sertifikasi
+                    </h3>
+
+                    <div class="mt-5 grid gap-6 grid-cols-1">
+                        <a href="https://drive.google.com/file/d/18HBzR1JmOcGkRFcqPv1QGsMoGjXqf2M2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=18HBzR1JmOcGkRFcqPv1QGsMoGjXqf2M2&sz=w1000" alt="AI Engineer For Milenial" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">AI Engineer For Milenial</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Digital Talent Scholarship 2026</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    KOMDIGI
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/15gjhFb3g6wmvP7Q6Uh2kV0Auxz0Czmpy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=15gjhFb3g6wmvP7Q6Uh2kV0Auxz0Czmpy&sz=w1000" alt="Membangun Personal Branding" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">Personal Branding di Media Sosial</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Digital Talent Scholarship 2026</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    KOMDIGI
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1Huom--m0FfE5wHSJLCNxNwhyIheLWeJa/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=1Huom--m0FfE5wHSJLCNxNwhyIheLWeJa&sz=w1000" alt="Basic Programming Concepts" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">Basic Programming Concepts</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Konsep dasar logika dan struktur pemrograman</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    CURSA
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1GbIlpHsV8GD__7I3_wV04-DcDbSNrUoP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=1GbIlpHsV8GD__7I3_wV04-DcDbSNrUoP&sz=w1000" alt="Web Development for Beginners" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">Web Development for Beginners</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Struktur HTML, CSS dan pembuatan web</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    CURSA
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1WC3Tl-Y5ZdoX_YDxO9TYnYIqI4Jg26cT/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=1WC3Tl-Y5ZdoX_YDxO9TYnYIqI4Jg26cT&sz=w1000" alt="Data Analytics for Beginners" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">Data Analytics for Beginners</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Pengolahan data dan visualisasi informasi</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    CURSA
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="https://drive.google.com/file/d/1590GzMUC3ALVYmnb4xMi1043wxmQoQ-2/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group overflow-hidden rounded-3xl border border-outline bg-zinc-950/80 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-400/30 flex flex-col">
+                            <div class="relative aspect-video w-full overflow-hidden bg-black/60">
+                                <div class="pointer-events-none absolute inset-0 z-10 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-1000 ease-in-out group-hover:translate-x-full"></div>
+                                <img src="https://drive.google.com/thumbnail?id=1590GzMUC3ALVYmnb4xMi1043wxmQoQ-2&sz=w1000" alt="Cyber Security" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" loading="lazy" />
+                            </div>
+                            <div class="p-5 bg-zinc-900/90 border-t border-white/5 flex items-center justify-between gap-4">
+                                <div>
+                                    <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition duration-300 line-clamp-1">Cyber Security</h4>
+                                    <p class="text-xs text-zinc-400 mt-1 line-clamp-1">Prinsip dasar keamanan siber dan proteksi</p>
+                                </div>
+                                <div class="shrink-0 rounded-full bg-purple-500/20 px-4 py-1.5 text-xs font-bold tracking-wide text-purple-300 border border-purple-500/30">
+                                    CURSA
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

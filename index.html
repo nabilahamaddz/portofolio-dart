@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DART adalah kelompok kreatif beranggotakan tujuh orang yang membangun karya digital dengan ide, desain, dan teknologi.">
+    <title>DART | Portofolio Kelompok</title>
+
+    <link rel="icon" type="image/png" href="assets/logo-dart.png">
+    <link rel="apple-touch-icon" href="assets/logo-dart.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    },
+                    colors: {
+                        base: '#09090b',
+                        surface: '#18181b',
+                        outline: '#27272a',
+                        primary: '#a855f7',
+                        secondary: '#06b6d4',
+                        accent: '#bef264'
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        [x-cloak] { display: none !important; }
+
+        html {
+            font-size: 100%;
+        }
+
+        @media (max-width: 768px) {
+            html {
+                font-size: 84%;
+            }
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #09090b; }
+        ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+        .liquid-glass-popup {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(28px) saturate(190%);
+            -webkit-backdrop-filter: blur(28px) saturate(190%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.85),
+                        0 0 50px -10px rgba(56, 189, 248, 0.25),
+                        inset 0 1px 2px 0 rgba(255, 255, 255, 0.35);
+        }
+        .liquid-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .liquid-glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), 0 0 20px 0 rgba(56, 189, 248, 0.2), inset 0 1px 2px 0 rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        .liquid-glass-pill {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.25);
+        }
+        .liquid-glass-pill:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body
+    x-data="{
+        memberOpen: false,
+        memberContent: '',
+        loading: false,
+        loadError: false,
+
+        async loadMember(url) {
+            this.memberOpen = true
+            this.memberContent = ''
+            this.loadError = false
+            this.loading = true
+            document.body.style.overflow = 'hidden'
+
+            try {
+                const cacheBuster = (url.includes('?') ? '&' : '?') + 't=' + Date.now()
+                const response = await fetch(url + cacheBuster, { cache: 'no-store' })
+
+                if (!response.ok) {
+                    throw new Error('Gagal memuat portofolio')
+                }
+
+                this.memberContent = await response.text()
+            } catch (error) {
+                this.loadError = true
+            } finally {
+                this.loading = false
+            }
+        },
+
+        closeMember() {
+            this.memberOpen = false
+            this.memberContent = ''
+            this.loadError = false
+            document.body.style.overflow = ''
+        }
+    }"
+    class="bg-base font-sans text-zinc-300 antialiased selection:bg-accent selection:text-base overflow-x-hidden">
+    
+    <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-blob" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-[100px] opacity-70 animate-blob" style="animation-delay: 4s;"></div>
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+    </div>
+
+    <header x-data="{ open: false, scrolled: false }" 
+            @scroll.window="scrolled = (window.pageYOffset > 20)"
+            :class="scrolled ? 'bg-base/80 border-b border-outline backdrop-blur-md py-3' : 'bg-transparent py-5'"
+            class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8" aria-label="Global">
+            <a href="" class="group flex items-center gap-2.5">
+                <div class="relative grid h-10 w-10 place-items-center rounded-xl bg-surface border border-outline overflow-hidden transition-all group-hover:border-primary/50">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <span>
+                        <img class="w-7 h-7" src="assets/logo-dart.png" alt="Logo Dart">
+                    </span>
+                </div>
+                <span class="text-xl font-bold tracking-widest text-white">DART</span>
+            </a>
+
+            <div class="hidden items-center gap-8 md:flex rounded-full bg-surface/50 border border-outline px-6 py-2 backdrop-blur-sm">
+                <a href="#tentang" class="text-sm font-medium text-zinc-400 transition hover:text-white">Tentang</a>
+                <a href="#anggota" class="text-sm font-medium text-zinc-400 transition hover:text-white">Tim</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <a href="kontak" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-base transition hover:bg-accent hover:shadow-[0_0_20px_rgba(190,242,100,0.4)]">Hubungi Kami</a>
+            </div>
+
+            <button @click="open = !open" class="md:hidden relative h-10 w-10 rounded-xl border border-outline bg-surface p-2 text-zinc-400 hover:text-white focus:outline-none">
+                <svg x-show="!open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+                <svg x-cloak x-show="open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+
+            <div x-cloak x-show="open" x-transition class="absolute left-4 right-4 top-full mt-4 rounded-2xl border border-outline bg-surface p-4 shadow-2xl backdrop-blur-xl md:hidden">
+                <div class="flex flex-col gap-2">
+                    <a @click="open = false" href="#tentang" class="rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:text-white">Tentang</a>
+                    <a @click="open = false" href="#anggota" class="rounded-lg px-4 py-3 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:text-white">Anggota</a>
+                    <a @click="open = false" href="kontak" class="mt-2 rounded-lg bg-white px-4 py-3 text-center text-sm font-bold text-base">Hubungi Kami</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="relative flex min-h-screen items-center justify-center pt-20 pb-16 px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto flex flex-col items-center z-10">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+                    Kami membuat ide <br class="hidden md:block">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">menjadi nyata.</span>
+                </h1>
+                
+                <p class="max-w-2xl text-lg md:text-xl text-zinc-400 mb-10 leading-relaxed">
+                    Selamat datang di portofolio kelompok DART. Kami adalah tujuh anggota yang memadukan logika terstruktur dan desain visual untuk menciptakan karya digital yang fungsional, estetik, dan relevan.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                    <a href="#tentang" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-base font-bold transition hover:bg-zinc-200 hover:scale-105 duration-300">
+                        Tentang
+                    </a>
+                    <a href="#anggota" class="w-full sm:w-auto px-8 py-3.5 rounded-full border border-outline bg-surface/50 text-white font-medium transition hover:border-zinc-600 hover:bg-surface backdrop-blur-md">
+                        Kenali Tim
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="py-24 px-6 lg:px-8 border-t border-outline/50 bg-surface/20">
+            <div class="mx-auto max-w-7xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
+                    <div class="max-w-2xl">
+                        <h2 class="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Tentang DART</h2>
+                        <h3 class="text-3xl md:text-5xl font-bold text-white leading-tight">Kolaborasi Lintas <br> Disiplin.</h3>
+                    </div>
+                    <p class="max-w-md text-zinc-400 leading-relaxed">
+                        Sebagai satu kelompok, kami percaya hasil terbaik lahir dari kolaborasi. Ketujuh anggota DART membawa keahlian berbeda, dari arsitektur sistem hingga desain antarmuka, lalu menyatukannya menjadi solusi yang utuh.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 min-[530px]:grid-cols-2 gap-6">
+                    <div class="rounded-3xl border border-outline bg-surface p-8 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h4 class="text-6xl font-black text-white mb-2">7</h4>
+                        <p class="text-sm font-medium text-zinc-400">Anggota</p>
+                    </div>
+                    <div class="rounded-3xl border border-outline bg-surface p-8 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h4 class="text-6xl font-black text-white mb-2">100%</h4>
+                        <p class="text-sm font-medium text-zinc-400">Kode & Desain Otentik</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="anggota" class="py-24 px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-3">Anggota Tim</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold text-white">Pondasi dari DART.</h3>
+                    <p class="mt-4 text-zinc-400 max-w-xl mx-auto">Tujuh individu dengan keahlian beragam yang mengeksekusi setiap proyek secara kolaboratif.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <button
+                        type="button"
+                        @click="loadMember('partials/kenzena.html')"
+                        class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/kenzena.jpg" alt="Kenzena Mahendra Putra" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">01</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Kenzena Mahendra Putra</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/dinda.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/dinda.jpeg" alt="Dinda Putri Septiana" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">02</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Dinda Putri Septiana</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/azka.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/azka.jpg" alt="Rifqi Azka Fakhriyan" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">03</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Rifqi Azka Fakhriyan</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/hilldan.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/Hilldan W.jpeg" alt="Hilldan Wilyarosa" class="absolute inset-0 w-full h-full object-cover object-[center_45%] transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">04</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Hilldan Wilyarosa</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/nabil.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/Nabil.jpg" alt="Nabil Ahmad Dhika" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">05</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Nabil Ahmad Dhika</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/anggota-6.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/anggota-6.jpg" alt="Nama Anggota 6" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">06</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Nama Anggota 6</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <button type="button" @click="loadMember('partials/anggota-7.html')" class="text-left rounded-3xl border border-outline bg-surface aspect-[4/5] relative overflow-hidden group hover:border-primary/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                        <img src="assets/anggota-7.jpg" alt="Nama Anggota 7" class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent"></div>
+
+                        <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                        <div class="relative z-20 flex flex-col justify-between h-full p-6">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xs font-mono text-zinc-300">07</span>
+                                <span class="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[10px] font-semibold text-zinc-300 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">Lihat profil</span>
+                            </div>
+
+                            <div>
+                                <h4 class="text-lg font-bold text-white">Nama Anggota 7</h4>
+                                <p class="text-primary text-xs font-medium mt-1">D3 Teknologi Informasi</p>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div class="hidden sm:flex rounded-3xl border border-dashed border-outline bg-surface/30 p-6 flex-col justify-center items-center text-center aspect-[4/5]">
+                        <span class="font-extrabold text-2xl text-white tracking-widest mb-1">DART</span>
+                        <p class="text-xs text-zinc-500">7 Orang. 1 Tujuan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="py-24 px-6 lg:px-8">
+            <div class="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] bg-surface border border-outline text-center p-12 md:p-20 shadow-2xl">
+                <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] h-[30rem] bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full blur-[80px] -z-10 opacity-60"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6">Mari berkarya bersama DART.</h2>
+                <p class="mx-auto max-w-xl text-zinc-400 mb-10 text-lg">
+                    Mari berdiskusi. Kami selalu antusias mendengar ide-ide baru dan tantangan teknis untuk diselesaikan bersama.
+                </p>
+                
+                <a href="kontak" class="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-base transition-all hover:scale-105 hover:bg-accent hover:shadow-[0_0_30px_rgba(190,242,100,0.3)]">
+                    Mulai Diskusi 
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+
+    <div 
+        x-cloak 
+        x-show="memberOpen" 
+        x-transition.opacity 
+        @click="if ($event.target === $el && !window.isCertModalOpen) closeMember()"
+        @keydown.escape.window="if (window.isCertModalOpen) return; closeMember()" 
+        class="fixed inset-x-0 bottom-0 top-16 z-40 overflow-y-auto bg-black/80 p-4 backdrop-blur-md sm:p-6 lg:p-10">
+        <div x-transition class="mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-outline bg-base shadow-2xl">
+            <div x-show="loading" class="grid min-h-[420px] place-items-center p-10">
+                <div class="text-center">
+                    <div class="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-zinc-700 border-t-primary"></div>
+                    <p class="mt-4 text-sm text-zinc-500">Memuat portofolio...</p>
+                </div>
+            </div>
+
+            <div x-show="!loading && memberContent" x-html="memberContent"></div>
+
+            <div x-show="!loading && loadError" class="p-10 text-center">
+                <h2 class="text-2xl font-bold text-white">Portofolio gagal dimuat</h2>
+                <p class="mt-3 text-zinc-400">Silakan tutup lalu coba kembali.</p>
+
+                <button type="button" @click="closeMember()" class="mt-6 rounded-full bg-white px-6 py-3 text-sm font-bold text-base">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="border-t border-outline/50 bg-base px-6 py-10 lg:px-8">
+        <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row">
+            <div class="flex items-center gap-2">
+                <span>
+                    <img class="w-5 h-5" src="assets/logo-dart.png" alt="Logo Dart">
+                </span>
+                <span class="font-bold tracking-widest text-zinc-300 text-sm">DART</span>
+            </div>
+            <p class="text-sm text-zinc-500 font-medium">&copy; 2026 Kelompok DART. Dirancang dan dikembangkan bersama.</p>
+        </div>
+    </footer>
+
+    <!-- Global Liquid Glass Certificate Modal -->
+    <div 
+        id="liquid-cert-modal" 
+        style="display: none;" 
+        class="fixed inset-0 z-[110] items-center justify-center p-3 sm:p-6 md:p-8 bg-black/80 backdrop-blur-xl transition-opacity duration-300 opacity-0"
+        onclick="event.stopPropagation(); if(event.target === this) closeCertModal(event)">
+        
+        <!-- Modal Card with Liquid Glass -->
+        <div 
+            id="liquid-cert-card"
+            onclick="event.stopPropagation()"
+            class="liquid-glass-popup relative w-full max-w-4xl max-h-[92vh] flex flex-col rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 transform scale-95 translate-y-4">
+
+            <!-- Liquid Ambient Colored Blobs -->
+            <div class="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-primary/25 filter blur-3xl opacity-70 pointer-events-none animate-pulse"></div>
+            <div class="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-secondary/25 filter blur-3xl opacity-70 pointer-events-none animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-accent/15 filter blur-3xl opacity-50 pointer-events-none"></div>
+
+            <!-- Specular Highlight Top Line -->
+            <div class="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/50 to-transparent"></div>
+
+            <!-- Glass Header -->
+            <div class="relative z-10 flex items-center justify-between border-b border-white/10 bg-white/[0.04] px-6 py-4 backdrop-blur-md">
+                <div class="flex items-center gap-3">
+                    <span class="grid h-10 w-10 place-items-center rounded-2xl border border-white/20 bg-white/10 text-primary shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]">
+                        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
+                    </span>
+                    <div>
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary">
+                            <span class="h-1.5 w-1.5 rounded-full bg-primary animate-ping"></span>
+                            <span id="liquid-cert-issuer"></span>
+                        </span>
+                        <h3 id="liquid-cert-title" class="text-base sm:text-lg font-bold text-white line-clamp-1"></h3>
+                    </div>
+                </div>
+
+                <!-- Close Button -->
+                <button 
+                    type="button" 
+                    onclick="closeCertModal(event)" 
+                    class="liquid-glass-pill grid h-10 w-10 place-items-center rounded-full text-white transition hover:bg-white/20 hover:scale-105"
+                    aria-label="Tutup popup">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Glass Content Viewer -->
+            <div class="relative z-10 flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
+                <!-- Certificate Preview Image with Spinner -->
+                <div class="relative w-full min-h-[280px] max-h-[62vh] flex items-center justify-center rounded-2xl overflow-hidden border border-white/10 bg-black/60 p-2 sm:p-4">
+                    <div id="liquid-cert-loading" class="absolute inset-0 grid place-items-center bg-black/60 backdrop-blur-sm z-10">
+                        <div class="flex flex-col items-center gap-2">
+                            <div class="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-primary"></div>
+                            <span class="text-xs text-zinc-400 font-mono">Memuat sertifikat...</span>
+                        </div>
+                    </div>
+                    <img 
+                        id="liquid-cert-img" 
+                        src="" 
+                        alt="Sertifikat" 
+                        onload="const l = document.getElementById('liquid-cert-loading'); if(l) l.style.display='none';"
+                        class="max-h-[58vh] w-auto max-w-full rounded-xl object-contain shadow-2xl transition duration-300">
+                </div>
+
+                <!-- Certificate Info Card -->
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-md">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span id="liquid-cert-year" class="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[10px] font-mono text-zinc-400"></span>
+                        <span id="liquid-cert-badge" class="text-xs font-semibold text-zinc-300"></span>
+                    </div>
+                    <p id="liquid-cert-desc" class="text-xs text-zinc-400 leading-relaxed"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.isCertModalOpen = false;
+
+        window.openCertModal = function(imgSrc, title, issuer, year, badge, desc, fallbackId) {
+            window.isCertModalOpen = true;
+            const modal = document.getElementById('liquid-cert-modal');
+            const card = document.getElementById('liquid-cert-card');
+            const img = document.getElementById('liquid-cert-img');
+            const loader = document.getElementById('liquid-cert-loading');
+            if (!modal || !card || !img) return;
+
+            if (loader) loader.style.display = 'grid';
+            img.onerror = function() {
+                if (loader) loader.style.display = 'none';
+                if (fallbackId) {
+                    this.onerror = null;
+                    this.src = 'https://lh3.googleusercontent.com/d/' + fallbackId;
+                }
+            };
+            img.src = imgSrc;
+            document.getElementById('liquid-cert-title').textContent = title || '';
+            document.getElementById('liquid-cert-issuer').textContent = issuer || '';
+            document.getElementById('liquid-cert-year').textContent = year || '';
+            document.getElementById('liquid-cert-badge').textContent = badge || '';
+            document.getElementById('liquid-cert-desc').textContent = desc || '';
+
+            modal.style.display = 'flex';
+            void modal.offsetHeight;
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            card.classList.remove('scale-95', 'translate-y-4');
+            card.classList.add('scale-100', 'translate-y-0');
+        };
+
+        window.closeCertModal = function(e) {
+            if (e) {
+                if (e.preventDefault) e.preventDefault();
+                if (e.stopPropagation) e.stopPropagation();
+                if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+            }
+            const modal = document.getElementById('liquid-cert-modal');
+            const card = document.getElementById('liquid-cert-card');
+            if (!modal || !card) return;
+
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            card.classList.remove('scale-100', 'translate-y-0');
+            card.classList.add('scale-95', 'translate-y-4');
+            setTimeout(() => {
+                modal.style.display = 'none';
+                const img = document.getElementById('liquid-cert-img');
+                if (img) img.src = '';
+                setTimeout(() => {
+                    window.isCertModalOpen = false;
+                }, 100);
+            }, 250);
+        };
+
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('liquid-cert-modal');
+                if (modal && modal.style.display === 'flex') {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    window.closeCertModal(e);
+                }
+            }
+        }, true);
+    </script>
+</body>
+</html>

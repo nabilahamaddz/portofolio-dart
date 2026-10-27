@@ -1,0 +1,202 @@
+<div class="relative min-h-[360px] overflow-hidden border-b border-outline">
+    <img src="assets/kenzena.jpg" alt="Kenzena Mahendra Putra" class="absolute inset-0 h-full w-full object-cover object-top opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-base via-base/75 to-black/20"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/10"></div>
+
+    <button type="button" @click="closeMember()" class="absolute right-5 top-5 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-white hover:text-base" aria-label="Tutup profil">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <div class="relative z-20 flex min-h-[360px] items-end p-7 md:p-10">
+        <div class="max-w-3xl">
+            <span class="mb-4 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">Profil Anggota 01</span>
+
+            <h2 class="text-4xl font-black tracking-tight text-white md:text-6xl">Kenzena Mahendra Putra</h2>
+
+            <p class="mt-3 text-lg font-semibold text-zinc-200">Web Developer · Network Engineer</p>
+
+            <p class="mt-5 max-w-2xl leading-relaxed text-zinc-400">
+                Membangun solusi digital dengan memadukan pengembangan web, server, dan pemahaman jaringan.
+            </p>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+                <a href="https://kzmp.my.id/" target="_blank" rel="noopener noreferrer" class="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-base transition hover:bg-accent">Lihat Portofolio</a>
+                <a href="https://github.com/KZMPGroup" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-primary/50 hover:bg-primary/10">GitHub</a>
+                <a href="https://www.linkedin.com/in/kenzena/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-secondary/50 hover:bg-secondary/10">LinkedIn</a>
+                <a href="https://www.instagram.com/kenzena_/" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-pink-400/50 hover:bg-pink-400/10">Instagram</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="p-7 md:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="space-y-8">
+            <section>
+                <div class="mb-5">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Tentang</p>
+                    <h3 class="mt-2 text-2xl font-bold text-white">Profil Singkat</h3>
+                </div>
+
+                <div class="rounded-3xl border border-outline bg-surface p-6">
+                    <p class="leading-relaxed text-zinc-400">
+                        Mahasiswa D3 Teknologi Informasi yang berfokus pada pengembangan web, server, jaringan, dan produk digital yang dapat digunakan secara langsung.
+                    </p>
+
+                    <div class="mt-6 grid grid-cols-3 gap-3">
+                        <div class="col-span-2 rounded-2xl border border-outline bg-base p-4">
+                            <p class="text-xs text-zinc-500">Program Studi</p>
+                            <p class="mt-1 text-sm font-semibold text-white">D3 Teknologi Informasi</p>
+                        </div>
+
+                        <div class="rounded-2xl border border-outline bg-base p-4">
+                            <p class="text-xs text-zinc-500">Kelas</p>
+                            <p class="mt-1 text-sm font-semibold text-white">1D</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="mb-5">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Keahlian</p>
+                    <h3 class="mt-2 text-2xl font-bold text-white">Skill</h3>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Web Development</span>
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Python</span>
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">JavaScript</span>
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Linux Debian</span>
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">MikroTik</span>
+                    <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Networking</span>
+                </div>
+            </section>
+
+            <section>
+                <div class="mb-5">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#39d353]">GitHub</p>
+                    <h3 class="mt-2 text-2xl font-bold text-white">Activity</h3>
+                </div>
+
+                <a href="https://github.com/KZMPGroup" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden rounded-3xl border border-outline bg-[#0d1117] p-5 transition hover:border-[#39d353]/40">
+                    <div class="w-full overflow-hidden">
+                        <img src="https://gh-heat.anishroy.com/api/KZMPGroup/svg?theme=green&darkMode=true&transparent=true" alt="GitHub Contribution Kenzena Mahendra Putra" class="block h-auto max-w-full" loading="lazy">
+                    </div>
+
+                    <div class="mt-4 flex items-center justify-between gap-4 border-t border-white/5 pt-4">
+                        <div>
+                            <p class="font-bold text-white">@KZMPGroup</p>
+                            <p class="mt-1 text-xs text-zinc-500">Aktivitas kontribusi GitHub</p>
+                        </div>
+
+                        <span class="text-sm font-semibold text-[#39d353]">GitHub →</span>
+                    </div>
+                </a>
+            </section>
+
+            <section>
+                <div class="mb-5">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Sertifikasi</p>
+                    <h3 class="mt-2 text-2xl font-bold text-white">Pencapaian</h3>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="https://kzmp.my.id/static/img/sertif/introduction-to-modern-ai.webp?v=b60b672f06c3a" hx-boost="false" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-secondary/40">
+                        <img src="https://kzmp.my.id/static/img/sertif/introduction-to-modern-ai.webp?v=b60b672f06c3a" alt="Sertifikat Introduction to Modern AI Kenzena Mahendra Putra" loading="lazy" class="h-40 w-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-secondary">Cisco Networking Academy · 2026</p>
+                            <h4 class="mt-2 font-bold text-white">Introduction to Modern AI</h4>
+                            <p class="mt-2 text-sm text-zinc-400">Selesai 7 September 2026.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://kzmp.my.id/static/img/sertif/linux-unhatched.webp?v=ed89b7a4f04da" hx-boost="false" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-primary/40">
+                        <img src="https://kzmp.my.id/static/img/sertif/linux-unhatched.webp?v=ed89b7a4f04da" alt="Sertifikat Linux Unhatched Kenzena Mahendra Putra" loading="lazy" class="h-40 w-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-primary">Cisco Networking Academy / NDG · 2026</p>
+                            <h4 class="mt-2 font-bold text-white">Linux Unhatched</h4>
+                            <p class="mt-2 text-sm text-zinc-400">Selesai 7 September 2026.</p>
+                        </div>
+                    </a>
+
+                    <a href="https://kzmp.my.id/static/img/sertif/sertifikat_HAKi_2026-01-27.jpg" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-accent/40">
+                        <img src="https://kzmp.my.id/static/img/sertif/sertif_surat_pencatatan_ciptaan_tiketinae.jpg" alt="Surat Pencatatan Ciptaan TiketinAE" class="h-40 w-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-accent">Hak Cipta · 2026</p>
+                            <h4 class="mt-2 font-bold text-white">Surat Pencatatan Ciptaan TiketinAE</h4>
+                        </div>
+                    </a>
+
+                    <a href="https://mikrotik.com/training/certificates/c695958cbbec5ca8776c" target="_blank" rel="noopener noreferrer" class="group block overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-primary/40">
+                        <img src="https://kzmp.my.id/static/img/sertif/sertif_mikrotik_MTCNA.jpg" alt="Sertifikat MikroTik MTCNA" class="h-40 w-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-wider text-primary">MikroTik · 2026</p>
+                            <h4 class="mt-2 font-bold text-white">MTCNA · Basic Network</h4>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div>
+            <section>
+                <div class="mb-5">
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Portofolio</p>
+                    <h3 class="mt-2 text-2xl font-bold text-white">Proyek Pilihan</h3>
+                    <p class="mt-2 text-sm text-zinc-500">Beberapa karya yang mewakili fokus saya.</p>
+                </div>
+
+                <div class="space-y-5">
+                    <article class="group overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-primary/40">
+                        <div class="overflow-hidden">
+                            <img src="https://kzmp.my.id/static/img/proyek/ejola.webp" alt="e-JOLA SMKN 2 Magetan" class="aspect-[16/8] w-full object-cover transition duration-500 group-hover:scale-105">
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <h4 class="text-xl font-bold text-white">e-JOLA</h4>
+                                <span class="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">Sistem Pendidikan</span>
+                            </div>
+
+                            <p class="mt-3 text-sm leading-relaxed text-zinc-400">
+                                Platform jurnal kelas, presensi QR, dan monitoring pembelajaran SMKN 2 Magetan.
+                            </p>
+
+                            <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-500">
+                                <span>QR Presensi</span>
+                                <span>Monitoring</span>
+                                <span>Web System</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="group overflow-hidden rounded-3xl border border-outline bg-surface transition hover:border-secondary/40">
+                        <a href="https://kiospanel.my.id/" target="_blank" rel="noopener noreferrer" class="block">
+                            <div class="overflow-hidden">
+                                <img src="https://kzmp.my.id/static/img/proyek/kiospanel.webp" alt="KiosPanel" class="aspect-[16/8] w-full object-cover transition duration-500 group-hover:scale-105">
+                            </div>
+
+                            <div class="p-6">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h4 class="text-xl font-bold text-white">KiosPanel</h4>
+                                    <span class="rounded-full bg-secondary/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-secondary">Infrastructure</span>
+                                </div>
+
+                                <p class="mt-3 text-sm leading-relaxed text-zinc-400">
+                                    Platform manajemen container multi-node dengan console real-time dan pemantauan resource.
+                                </p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <a href="https://kzmp.my.id/proyek" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full border border-outline bg-surface px-5 py-2.5 text-sm font-semibold text-white transition hover:border-primary/50 hover:bg-primary/10">
+                    Lihat semua proyek →
+                </a>
+            </section>
+        </div>
+    </div>
+</div>

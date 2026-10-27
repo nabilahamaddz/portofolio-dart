@@ -1,0 +1,405 @@
+<div class="relative isolate">
+    <img
+        src="assets/Nabil.jpg"
+        alt=""
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover object-[center_20%] opacity-[0.08] grayscale">
+    <div class="relative min-h-[380px] overflow-hidden border-b border-outline">
+        <img src="assets/Nabil.jpg" alt="Nabil Ahmad Dhika" class="absolute inset-0 h-full w-full object-cover object-top opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-t from-base via-base/75 to-black/20"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/10"></div>
+
+        <button
+            type="button"
+            @click="closeMember()"
+            class="absolute right-5 top-5 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-white hover:text-base"
+            aria-label="Tutup profil">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button> 
+
+        <div class="relative z-20 flex min-h-[380px] items-end p-7 md:p-10">
+            <div class="max-w-3xl">
+                <span class="mb-4 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+                    Profil Anggota 05
+                </span>
+
+                <h2 class="text-4xl font-black tracking-tight text-white md:text-6xl">
+                    Nabil Ahmad Dhika
+                </h2>
+
+                <p class="mt-3 text-lg font-medium text-zinc-300">
+                    D3 Teknologi Informasi
+                </p>
+
+                <p class="mt-5 max-w-2xl leading-relaxed text-zinc-400">
+                    Mahasiswa D3 Teknologi Informasi yang memiliki ketertarikan kuat pada pengembangan web dan keamanan siber (<em>Cybersecurity</em>), berfokus pada pembuatan aplikasi web yang tidak hanya interaktif, tetapi juga aman dari ancaman digital.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="https://github.com/nabilahamaddz" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 transition hover:border-primary/50 hover:text-white">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/nabil-ahmad-dhika-95943242b?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 transition hover:border-primary/50 hover:text-white">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://www.instagram.com/nazzy_qx?stkn=MTk3d2liaGFjajIxNw==" target="_blank" rel="noopener noreferrer" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-zinc-400 transition hover:border-primary/50 hover:text-white">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-7 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="space-y-8">
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-secondary">
+                        Tentang
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Profil Singkat
+                    </h3>
+
+                    <div class="mt-5 rounded-3xl border border-outline bg-surface p-6">
+                        <p class="leading-relaxed text-zinc-400">
+                            Mahasiswa D3 Teknologi Informasi yang memiliki antusiasme tinggi dalam eksplorasi teknologi digital modern. Saat ini tertarik pada pengembangan <strong class="font-semibold text-zinc-200">Web Development</strong>, <strong class="font-semibold text-zinc-200">Artificial Intelligence (AI)</strong>, dan <strong class="font-semibold text-zinc-200">Cybersecurity</strong> untuk membangun aplikasi web yang interaktif, cerdas, solutif, serta aman.
+                        </p>
+
+                        <div class="mt-5 overflow-hidden rounded-2xl border border-outline bg-black/40 p-4 backdrop-blur-md">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-2.5">
+                                <span class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-zinc-300">
+                                    <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+                                     Focus
+                                </span>
+                                <span class="text-[11px] font-mono text-zinc-500">Status: Active Exploration</span>
+                            </div>
+
+                            <div class="mt-3 grid grid-cols-1 gap-2 text-xs font-mono sm:grid-cols-2">
+                                <div class="flex items-center gap-2 rounded-lg bg-white/5 p-2 text-zinc-300">
+                                    <span class="text-primary">⚡</span> Web Development
+                                </div>
+                                <div class="flex items-center gap-2 rounded-lg bg-white/5 p-2 text-zinc-300">
+                                    <span class="text-accent">🤖</span> Artificial Intelligence
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 grid grid-cols-3 gap-3">
+                            <div class="col-span-2 rounded-2xl border border-outline bg-base p-4">
+                                <p class="text-xs text-zinc-500">Program Studi</p>
+                                <p class="mt-1 text-sm font-semibold text-white">D3 Teknologi Informasi</p>
+                            </div>
+
+                            <div class="rounded-2xl border border-outline bg-base p-4">
+                                <p class="text-xs text-zinc-500">Kelas</p>
+                                <p class="mt-1 text-sm font-semibold text-white">1B</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Keahlian
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Skill
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Web Development</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Python</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">HTML</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">Artificial Intelligence</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">CSS</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-10">
+                <section>
+                    <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">Pencapaian</p>
+                            <h3 class="mt-2 text-2xl font-bold text-white">Sertifikasi & Lisensi</h3>
+                        </div>
+                        <span class="rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1 text-xs font-bold text-primary shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+                            9 Sertifikat Terverifikasi
+                        </span>
+                    </div>
+
+                    <!-- Grid Sertifikat dari folder Google Drive -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Sertifikat 1 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1s9iXxzpFQ5URFeDpVH_v5Xlwb38_pJXy&sz=w1600', 'Data Analytics for Beginners', 'Cursa', '2026', 'Data Analytics', 'Sertifikat penyelesaian kursus Data Analytics for Beginners selama 17 jam 32 menit.', '1s9iXxzpFQ5URFeDpVH_v5Xlwb38_pJXy')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1s9iXxzpFQ5URFeDpVH_v5Xlwb38_pJXy&sz=w800" 
+                                        alt="Data Analytics for Beginners" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1s9iXxzpFQ5URFeDpVH_v5Xlwb38_pJXy';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Data Analytics</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Data Analytics for Beginners</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Data Analytics for Beginners selama 17 jam 32 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 2 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=19pUBzHSoHb9t6vYmxk6-MjGTgd988dLb&sz=w1600', 'Basic Programming Concepts', 'Cursa', '2026', 'Programming', 'Sertifikat penyelesaian kursus Basic Programming Concepts selama 6 jam 17 menit.', '19pUBzHSoHb9t6vYmxk6-MjGTgd988dLb')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=19pUBzHSoHb9t6vYmxk6-MjGTgd988dLb&sz=w800" 
+                                        alt="Basic Programming Concepts" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/19pUBzHSoHb9t6vYmxk6-MjGTgd988dLb';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Programming</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Basic Programming Concepts</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Basic Programming Concepts selama 6 jam 17 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 3 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1K08zPypn7K33iuxXo2KuPoOQOcyvs2Dh&sz=w1600', 'Google AI Essentials', 'Cursa', '2026', 'Artificial Intelligence', 'Sertifikat penyelesaian kursus Google AI Essentials selama 3 jam 29 menit.', '1K08zPypn7K33iuxXo2KuPoOQOcyvs2Dh')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1K08zPypn7K33iuxXo2KuPoOQOcyvs2Dh&sz=w800" 
+                                        alt="Google AI Essentials" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1K08zPypn7K33iuxXo2KuPoOQOcyvs2Dh';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">AI / Machine Learning</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Google AI Essentials</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Google AI Essentials selama 3 jam 29 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 4 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1ZBsAFw1KAKxFU0zEXvIpwRLfbKXbV1sJ&sz=w1600', 'Cyber security', 'Cursa', '2026', 'Cybersecurity', 'Sertifikat penyelesaian kursus Cyber security selama 2 jam 7 menit.', '1ZBsAFw1KAKxFU0zEXvIpwRLfbKXbV1sJ')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1ZBsAFw1KAKxFU0zEXvIpwRLfbKXbV1sJ&sz=w800" 
+                                        alt="Cyber security" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1ZBsAFw1KAKxFU0zEXvIpwRLfbKXbV1sJ';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Cybersecurity</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Cyber security</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Cyber security selama 2 jam 7 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 5 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1gz5Ln37lI-rdsYtm6x1c433XMitcs6Xz&sz=w1600', 'Web Development for Beginners', 'Cursa', '2026', 'Web Development', 'Sertifikat penyelesaian kursus Web Development for Beginners selama 5 jam 22 menit.', '1gz5Ln37lI-rdsYtm6x1c433XMitcs6Xz')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1gz5Ln37lI-rdsYtm6x1c433XMitcs6Xz&sz=w800" 
+                                        alt="Web Development for Beginners" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1gz5Ln37lI-rdsYtm6x1c433XMitcs6Xz';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Web Development</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Web Development for Beginners</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Web Development for Beginners selama 5 jam 22 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 6 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1Kt2dCzgNrUWO5_lzESNpUxd60ywpPPyY&sz=w1600', 'Public Speaking', 'Cursa', '2026', 'Communication', 'Sertifikat penyelesaian kursus Public Speaking selama 50 menit.', '1Kt2dCzgNrUWO5_lzESNpUxd60ywpPPyY')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1Kt2dCzgNrUWO5_lzESNpUxd60ywpPPyY&sz=w800" 
+                                        alt="Public Speaking" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Kt2dCzgNrUWO5_lzESNpUxd60ywpPPyY';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Cursa</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Communication</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Public Speaking</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat penyelesaian kursus Public Speaking selama 50 menit.</p>
+                        </div>
+
+                        <!-- Sertifikat 7 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1z-AXI5wQ5fX3h0A8iwGOZz-SNGiOD-V1&sz=w1600', 'Belajar Dasar Cloud dan Gen AI di AWS', 'Dicoding Indonesia', '2026', 'Cloud & AI', 'Sertifikat kelulusan kelas Belajar Dasar Cloud dan Gen AI di AWS dari Dicoding Indonesia.', '1z-AXI5wQ5fX3h0A8iwGOZz-SNGiOD-V1')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1z-AXI5wQ5fX3h0A8iwGOZz-SNGiOD-V1&sz=w800" 
+                                        alt="Belajar Dasar Cloud dan Gen AI di AWS" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1z-AXI5wQ5fX3h0A8iwGOZz-SNGiOD-V1';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Dicoding</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Cloud & AI</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Belajar Dasar Cloud dan Gen AI di AWS</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat kelulusan kelas Belajar Dasar Cloud dan Gen AI di AWS dari Dicoding Indonesia.</p>
+                        </div>
+
+                        <!-- Sertifikat 8 -->
+                        <div 
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1lyanaU5DgZkYE3x6BusZmnADMDdVkHfx&sz=w1600', 'Spec-Driven Development dengan Kiro', 'Dicoding Indonesia', '2026', 'Software Development', 'Sertifikat kelulusan kelas Spec-Driven Development dengan Kiro dari Dicoding Indonesia.', '1lyanaU5DgZkYE3x6BusZmnADMDdVkHfx')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img 
+                                        src="https://drive.google.com/thumbnail?id=1lyanaU5DgZkYE3x6BusZmnADMDdVkHfx&sz=w800" 
+                                        alt="Spec-Driven Development dengan Kiro" 
+                                        loading="lazy" 
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1lyanaU5DgZkYE3x6BusZmnADMDdVkHfx';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">Dicoding</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Software Development</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Spec-Driven Development dengan Kiro</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat kelulusan kelas Spec-Driven Development dengan Kiro dari Dicoding Indonesia.</p>
+                        </div>
+
+                        <!-- Sertifikat 9 -->
+                        <div
+                            onclick="openCertModal('https://drive.google.com/thumbnail?id=1_sl1KunH37Vmv90U-Kc-y0QGcvH7DjP4&sz=w1600', 'Seni Public Speaking Untuk Pemimpin Muda Berkarakter', 'KOMDIGI', '2026', 'Public Speaking', 'Sertifikat pelatihan Seni Public Speaking Untuk Pemimpin Muda Berkarakter dalam program Digital Talent Scholarship 2026.', '1_sl1KunH37Vmv90U-Kc-y0QGcvH7DjP4')"
+                            class="liquid-glass-card group cursor-pointer overflow-hidden rounded-3xl p-4 flex flex-col justify-between">
+                            <div>
+                                <div class="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-white/10 bg-black/60">
+                                    <img
+                                        src="https://drive.google.com/thumbnail?id=1_sl1KunH37Vmv90U-Kc-y0QGcvH7DjP4&sz=w800"
+                                        alt="Seni Public Speaking Untuk Pemimpin Muda Berkarakter"
+                                        loading="lazy"
+                                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                                        onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1_sl1KunH37Vmv90U-Kc-y0QGcvH7DjP4';">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                                    <span class="absolute bottom-2 right-2 rounded-md border border-white/20 bg-black/60 px-2 py-0.5 text-[10px] font-mono text-zinc-300 backdrop-blur-sm">2026</span>
+                                    <div class="absolute inset-0 grid place-items-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity backdrop-blur-[2px]">
+                                        <span class="liquid-glass-pill rounded-full px-3 py-1 text-[11px] font-bold text-white shadow-md">Lihat</span>
+                                    </div>
+                                </div>
+                                <div class="mt-3.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary">KOMDIGI</span>
+                                        <span class="text-[11px] text-zinc-500 font-mono">Public Speaking</span>
+                                    </div>
+                                    <h4 class="mt-2 text-sm font-bold text-white group-hover:text-primary transition-colors line-clamp-2">Seni Public Speaking Untuk Pemimpin Muda Berkarakter</h4>
+                                </div>
+                            </div>
+                            <p class="mt-2 text-xs leading-relaxed text-zinc-400 line-clamp-2">Sertifikat pelatihan Seni Public Speaking Untuk Pemimpin Muda Berkarakter dalam program Digital Talent Scholarship 2026.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

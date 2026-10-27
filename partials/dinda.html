@@ -1,0 +1,109 @@
+<div>
+    <div class="relative min-h-[380px] overflow-hidden border-b border-outline">
+        <div class="absolute inset-0 bg-gradient-to-t from-base via-base/90 to-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-secondary/10"></div>
+
+        <button
+            type="button"
+            @click="closeMember()"
+            class="absolute right-5 top-5 z-30 grid h-11 w-11 place-items-center rounded-full border border-white/10 bg-black/40 text-white backdrop-blur-md transition hover:bg-white hover:text-base"
+            aria-label="Tutup profil">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="relative z-20 flex min-h-[380px] items-end p-7 md:p-10">
+            <div class="max-w-3xl">
+                <span class="mb-4 inline-flex rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+                    Profil anggota 02
+                </span>
+
+                <h2 class="text-4xl font-black tracking-tight text-white md:text-6xl">
+                    Dinda Putri Septiana
+                </h2>
+
+                <p class="mt-3 text-lg font-medium text-zinc-300">
+                    D3 Teknologi Informasi
+                </p>
+
+                <p class="mt-5 max-w-2xl leading-relaxed text-zinc-400">
+                    Mahasiswa teknologi informasi yang aktif belajar, berkembang, dan tertarik pada dunia teknologi.
+                </p>
+
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <a href="https://github.com/dindaputriseptiana" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-primary/50 hover:bg-primary/10">
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/dinda-putri-septiana-28233a430" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-secondary/50 hover:bg-secondary/10">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://www.instagram.com/dnndarty" class="rounded-full border border-outline bg-surface/80 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-pink-400/50 hover:bg-pink-400/10">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-7 md:p-10">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+            <div class="space-y-8">
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-secondary">
+                        Tentang
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Profil Singkat
+                    </h3>
+
+                    <div class="mt-5 rounded-3xl border border-outline bg-surface p-6">
+                        <p class="leading-relaxed text-zinc-400">
+                            Saya adalah mahasiswa Teknologi Informasi yang tertarik pada dunia teknologi, senang mempelajari hal baru, dan terus mengembangkan keterampilan untuk menciptakan solusi teknologi yang bermanfaat.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Keahlian
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Skill
+                    </h3>
+
+                    <div class="mt-5 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">HTML</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">CSS</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">JavaScript</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">NestJS</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">React</span>
+                        <span class="rounded-full border border-outline bg-surface px-4 py-2 text-sm text-zinc-300">TypeScript</span>
+                    </div>
+                </section>
+            </div>
+
+            <div class="space-y-10">
+                <section>
+                    <p class="text-xs font-bold uppercase tracking-[0.2em] text-accent">
+                        Pencapaian
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-bold text-white">
+                        Sertifikasi
+                    </h3>
+
+                    <div class="mt-5 rounded-3xl border border-outline bg-surface p-6">
+                        <p class="text-sm leading-relaxed text-zinc-400">
+                            Belum ada sertifikasi.
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
